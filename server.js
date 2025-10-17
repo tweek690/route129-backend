@@ -203,6 +203,11 @@ app.use((req, res) => {
   res.status(404).json({ error: 'Not found' });
 });
 
+// ✅ Simple test route so Render shows a response
+app.get("/test", (req, res) => {
+  res.json({ message: "Route 129 backend is running ✅" });
+});
+
 app.listen(PORT, () => {
   console.log(`${RESTAURANT_NAME} backend listening on port ${PORT}`);
 });
